@@ -13,5 +13,4 @@ public class BadRequestException extends AbstractThrowableProblem {
     public BadRequestException(Object object, String messageCode) {
         // TODO Auto-generated constructor stub
     }
-
 }
