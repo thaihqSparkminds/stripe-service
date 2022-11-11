@@ -1,5 +1,9 @@
 package com.example.stripe.controller.publics;
 
+import java.net.URI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,11 +22,14 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/payment")
 @RequiredArgsConstructor
 public class PaymentController {
-
-    private PaymentService service;
+    
+    @Autowired
+    private PaymentService paymentService;
 
     @PostMapping("/create-session")
     public ResponseEntity<PaySessionResponseDto> createSession(@RequestBody PaySessionRequestDto dto) {
-        return ResponseEntity.ok(service.createSession(dto));
+        return ResponseEntity.ok(paymentService.createSession(dto));
+//        String url = paymentService.createSession(dto).getUrl();
+//        return ResponseEntity.status(HttpStatus.FOUND).location(URI.create(url)).build();
     }
 }

@@ -1,17 +1,15 @@
-package com.example.stripe.service.dto.request;
+package com.example.stripe.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PriceRequestDto {
+public class DefaultPriceDataDto {
     private String currency;
     private Long unitAmount;
-    private String product;
-    private String nickName;
 }

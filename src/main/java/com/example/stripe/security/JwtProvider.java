@@ -38,7 +38,6 @@ public class JwtProvider {
         jwtParser = Jwts.parserBuilder().setSigningKey(key).build();
     }
 
-
     public JwtTokenDto createToken(User user) {
         String tokenId = UUID.randomUUID().toString();
         Date iat = new Date(System.currentTimeMillis());

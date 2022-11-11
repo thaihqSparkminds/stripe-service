@@ -33,7 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
             Map<String, Object> lineItem = new HashMap<>();
             lineItem.put("price", product.getPrice());
             lineItem.put("quantity", product.getQuantity());
-            
+
             lineItems.add(lineItem);
         }
 

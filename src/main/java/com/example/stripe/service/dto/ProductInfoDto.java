@@ -13,5 +13,6 @@ public class ProductInfoDto {
     private String name;
     private String description;
     private boolean active;
-    private String[] image;
+    private String[] images;
+    private DefaultPriceDataDto defaultPriceData;
 }
